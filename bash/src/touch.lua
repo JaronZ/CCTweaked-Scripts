@@ -7,7 +7,7 @@ local args = {...}
 if #args == 0 then
     print(__NAME..": missing file operand")
     print("Try '"..__NAME.." --help' for more information")
-    goto endProgram
+    return
 end
 
 for i = 1, #args do
@@ -15,5 +15,3 @@ for i = 1, #args do
         fs.open(args[i], "w").close()
     end
 end
-
-::endProgram::
