@@ -12,9 +12,9 @@ if #args == 0 then
 end
 
 for i = 1, #args do
-    if not fs.exists(args[i]) do
+    if not fs.exists(args[i]) then
         print(__NAME..": "..args[i]..": No such file or directory")
-    elseif fs.isDir(args[i]) do
+    elseif fs.isDir(args[i]) then
         print(__NAME..": "..args[i]..": Is a directory")
     else
         local file = fs.open(args[i], "r")
